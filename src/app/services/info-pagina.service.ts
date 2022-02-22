@@ -9,10 +9,10 @@ import { EquipoInt } from '../interfaces/equipo.interface';
 export class InfoPaginaService {
   info: InfoPaginaInt = {};
   cargada = false;
-  equipo: EquipoInt = {};
+  equipo: any = {};
 
   constructor(private http: HttpClient) {
-    // console.log("Info Pagina");
+    console.log('Info Pagina');
 
     this.cargarInfo();
     this.cargarEquipo();
