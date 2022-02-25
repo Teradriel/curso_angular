@@ -9,7 +9,7 @@ import { EquipoInt } from '../interfaces/equipo.interface';
 export class InfoPaginaService {
   info: InfoPaginaInt = {};
   cargada = false;
-  equipo: any = {};
+  equipo: any[] = [];
 
   constructor(private http: HttpClient) {
     //console.log('Info Pagina');
@@ -31,7 +31,7 @@ export class InfoPaginaService {
       .get(
         'https://base-datos-curso-angular-default-rtdb.europe-west1.firebasedatabase.app/equipo.json'
       )
-      .subscribe((resp: EquipoInt) => {
+      .subscribe((resp: any) => {
         this.cargada = true;
         this.equipo = resp;
 

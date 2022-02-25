@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from '../../services/info-pagina.service';
+import { InfoPaginaInt } from '../../interfaces/info-pagina.interface';
 
 @Component({
   selector: 'app-about',
