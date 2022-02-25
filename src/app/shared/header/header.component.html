@@ -53,11 +53,13 @@
           <a routerLink="contact" class="rk-menu__link">Contactame</a>
         </li>
       </ul>
-      <form class="rk-search">
+      <div class="rk-search">
         <input
           type="text"
-          placeholder="Search"
+          (keyup.enter)="buscarProducto(txtSearch.value)"
+          placeholder="Buscar"
           id="urku-search"
+          #txtSearch
           class="rk-search-field"
         />
         <label for="urku-search">
@@ -65,7 +67,7 @@
             <use xlink:href="assets/img/symbols.svg#icon-search"></use>
           </svg>
         </label>
-      </form>
+      </div>
     </nav>
   </div>
 </header>

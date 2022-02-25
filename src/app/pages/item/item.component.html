@@ -1,10 +1,17 @@
-<section *ngIf="producto" class="ae-container-fluid ae-container-fluid--full">
-  <header class="rk-portfolio-cover item-inside-1">
+<section class="ae-container-fluid ae-container-fluid--full">
+  <header
+    [ngStyle]="{
+      'background-image': 'url(assets/productos/' + id + '/main.jpg)'
+    }"
+    class="rk-portfolio-cover item-inside-1"
+  >
     <div class="item-inside__meta">
       <h1 class="ae-u-bolder rk-portfolio-title">
-        {{ producto.producto }}
+        Producto{{ producto.producto }}
       </h1>
-      <p class="ae-theta rk-portfolio-category">{{ producto.categoria }}</p>
+      <p class="ae-theta rk-portfolio-category">
+        Categoria{{ producto.categoria }}
+      </p>
     </div>
   </header>
   <div class="ae-container-fluid">
@@ -35,8 +42,8 @@
   <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
       <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-        <h4 class="ae-u-bolder">{{ producto.subtitulo1 }}</h4>
-        <p class="ae-eta">Un producto{{ producto.desc1 }}</p>
+        <h4 class="ae-u-bolder">Subtitulo 1{{ producto.subtitulo1 }}</h4>
+        <p class="ae-eta">Desc1{{ producto.desc1 }}</p>
         <!-- <p class="ae-eta">
           It includes a A6 flyer, A5 folder, A4 horizontal paper and a business
           card mockup. You can easily put your own graphics and create a new
@@ -44,23 +51,16 @@
         </p>-->
       </div>
       <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-        <img src="assets/img/inner-1.jpg" alt="Urku Portfolio" />
+        <img src="assets/productos/{{ id }}/pic-1.jpg" alt="Urku Portfolio" />
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
       <div class="ae-grid__item item-lg-8">
-        <img src="assets/img/inner-2.jpg" alt="Urku Portfolio" />
+        <img src="assets/productos/{{ id }}/pic-2.jpg" alt="Urku Portfolio" />
       </div>
       <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
-        <p>
-          {{ producto.desc2 }}
-        </p>
-        <p class="au-mb-3">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit <br />in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur.
-        </p>
+        <p>Subtitulo2{{ producto.subtitulo2 }}</p>
+        <p class="au-mb-3">Desc2{{ producto.desc2 }}</p>
         <p class="ae-u-bolder">Right Box Small Text</p>
       </div>
     </div>
